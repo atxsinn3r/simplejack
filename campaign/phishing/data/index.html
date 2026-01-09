@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign In</title>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="brand" aria-label="Brand panel">
+      <div class="brand__inner">
+        <div class="brand__mark" aria-hidden="true">
+          <span class="dot dot--a"></span>
+          <span class="dot dot--b"></span>
+          <span class="dot dot--c"></span>
+        </div>
+        <h1 class="brand__title">Simple Jack</h1>
+        <p class="brand__subtitle">Secure sign-in for employees and partners.</p>
+
+        <div class="brand__meta">
+          <div class="meta__row">
+            <span class="meta__k">Environment</span>
+            <span class="meta__v">Production</span>
+          </div>
+          <div class="meta__row">
+            <span class="meta__k">Status</span>
+            <span class="meta__v"><span class="pill">Online</span></span>
+          </div>
+        </div>
+
+        <p class="brand__fineprint">
+          This is a demo template inspired by modern identity provider login pages.
+          Replace branding, links, and authentication wiring as needed.
+        </p>
+      </div>
+      <div class="brand__footer">
+        <a class="link" href="#" aria-label="Privacy">Privacy</a>
+        <span class="sep" aria-hidden="true">•</span>
+        <a class="link" href="#" aria-label="Terms">Terms</a>
+        <span class="sep" aria-hidden="true">•</span>
+        <a class="link" href="#" aria-label="Help">Help</a>
+      </div>
+    </aside>
+
+    <main class="content" aria-label="Login content">
+      <div class="card" role="region" aria-label="Sign in">
+        <header class="card__header">
+          <div class="logo" aria-hidden="true">ID</div>
+          <div>
+            <h2 class="card__title">Sign in</h2>
+            <p class="card__hint">Use Simple Jack credentials to continue.</p>
+          </div>
+        </header>
+
+        <form class="form" id="loginForm" novalidate>
+          <div class="field">
+            <label class="label" for="username">Username</label>
+            <input class="input" id="username" name="username" type="text" autocomplete="username" inputmode="email"
+                   placeholder="name@company.com" required />
+            <p class="error" id="usernameError" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="password">Password</label>
+            <div class="inputgroup">
+              <input class="input input--withbtn" id="password" name="password" type="password" autocomplete="current-password"
+                     placeholder="••••••••" required minlength="6" />
+              <button class="ghostbtn" type="button" id="togglePw" aria-label="Show password">Show</button>
+            </div>
+            <p class="error" id="passwordError" aria-live="polite"></p>
+          </div>
+
+          <div class="row">
+            <label class="checkbox">
+              <input type="checkbox" id="remember" name="remember" />
+              <span>Remember me</span>
+            </label>
+            <a class="link" href="#" aria-label="Need help signing in?">Need help?</a>
+          </div>
+
+          <button class="btn" type="submit">Sign in</button>
+
+          <div class="divider" role="separator" aria-label="Divider">
+            <span>or</span>
+          </div>
+
+          <button class="btn btn--secondary" type="button" id="ssoBtn">
+            Sign in with SSO
+          </button>
+
+          <div class="fine">
+            <a class="link" href="#" aria-label="Forgot password">Forgot password?</a>
+            <span class="sep" aria-hidden="true">•</span>
+            <a class="link" href="#" aria-label="Unlock account">Unlock account</a>
+          </div>
+        </form>
+      </div>
+
+      <footer class="pagefooter">
+        <span class="muted">© <span id="year"></span> Simple Jack</span>
+        <span class="sep" aria-hidden="true">•</span>
+        <a class="link" href="#" aria-label="Security">Security</a>
+        <span class="sep" aria-hidden="true">•</span>
+        <a class="link" href="#" aria-label="Contact">Contact</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

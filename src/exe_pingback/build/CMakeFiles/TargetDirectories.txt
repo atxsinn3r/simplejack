@@ -1,0 +1,3 @@
+/Users/wei/dev/simplejack/src/exe_pingback/build/CMakeFiles/EXEPINGBACK.dir
+/Users/wei/dev/simplejack/src/exe_pingback/build/CMakeFiles/edit_cache.dir
+/Users/wei/dev/simplejack/src/exe_pingback/build/CMakeFiles/rebuild_cache.dir

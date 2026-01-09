@@ -1,0 +1,4 @@
+__pycache__/
+.DS_Store
+vcpkg_installed/
+vcpkg.json
