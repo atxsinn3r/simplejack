@@ -1,12 +1,16 @@
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, abort
 from flask_classful import FlaskView, route
+from jinja2 import Environment, FileSystemLoader
 from ua_parser import parse
-import logging
+from lib.config import *
 from lib.helper import print_message as print
 from lib.ua import UserAgent
 from flask.views import MethodView
 from urllib.parse import urljoin
 import mimetypes
+import logging
+import os
+
 
 server = Flask(__name__)
 logging.getLogger('werkzeug').disabled = True
@@ -23,6 +27,10 @@ class Base(FlaskView):
   @route('/ping')
   def pingback(self):
     return 'OK\n'
+
+def get_new_campaign_fs_env(campaign_name):
+  root_dir = os.path.join(CAMPAIGN_PATH, campaign_name, 'data')
+  return Environment(loader=FileSystemLoader(root_dir))
 
 def get_pingback_url():
   return urljoin(server.config['pingback'], 'ping')
