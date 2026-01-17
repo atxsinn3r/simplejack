@@ -1,7 +1,7 @@
 ## What is Simple Jack?
 
-This is my vuln research test kit for browser related stuff. It may be ugly, but when it works it's
-nice, hence the name Simple Jack.
+Simple Jack is my home made vuln research test kit. It is essentially a web server that supports generic or campaign-ish level offensive needs. Some examples include download/exec attacks, request logging, XSS testing, phishing, or delivering browser exploits with precision, etc. It is meant to be casual and lightweight, not a heavy weight exploit kit like Metasploit. It may be a little ugly, but when it works it's nice, hence the name Simple Jack.
+
 
 ## License
 
