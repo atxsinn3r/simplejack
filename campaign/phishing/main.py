@@ -1,12 +1,9 @@
 from base.webserver import *
 from flask import Response
-from lib.config import CAMPAIGN_PATH
-import os
 
 class Campaign(Base):
   def __init__(self):
-    self.data_path = os.path.join(CAMPAIGN_PATH, 'phishing', 'data')
-    self.env = get_new_campaign_fs_env('phishing')
+    super().__init__('phishing')
 
   @route('/post', methods=['POST'])
   def handle_post(self):
@@ -19,9 +16,9 @@ class Campaign(Base):
   @route('/<filename>', methods=['GET'])
   def handle_get(self, filename):
     print(f'{self.get_remote_addr()} requesting: {filename}')
-    if not os.path.exists(os.path.join(self.data_path, filename)):
+    if not self.env_has_file(filename):
       abort(404)
-    template = self.env.get_template(filename)
+    template = self.get_template(filename)
     endpoint = urljoin(server.config['pingback'], 'post')
     html = template.render(postto=endpoint)
     src, full_path, _update = self.env.loader.get_source(self.env, filename)

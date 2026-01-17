@@ -16,6 +16,23 @@ server = Flask(__name__)
 logging.getLogger('werkzeug').disabled = True
 
 class Base(FlaskView):
+  def __init__(self, campaign_name=None):
+    self.campaign_name = None
+    if campaign_name:
+      self.campaign_name = campaign_name
+      self.root_dir = os.path.join(CAMPAIGN_PATH, campaign_name, 'data')
+      self.env = Environment(loader=FileSystemLoader(self.root_dir))
+
+  def env_has_file(self, fname):
+    if not self.campaign_name:
+      raise RuntimeError('campaign name not set')
+    return os.path.exists(os.path.join(self.root_dir, fname))
+
+  def get_template(self, fname):
+    if not self.campaign_name:
+      raise RuntimeError('campaign name not set')
+    return self.env.get_template(fname)
+
   def get_remote_addr(self):
     remote_addr = request.headers.getlist('X-FORWARDED-FOR')[0] if request.headers.getlist('X-FORWARDED-FOR') else request.remote_addr
     return remote_addr
@@ -27,10 +44,6 @@ class Base(FlaskView):
   @route('/ping')
   def pingback(self):
     return 'OK\n'
-
-def get_new_campaign_fs_env(campaign_name):
-  root_dir = os.path.join(CAMPAIGN_PATH, campaign_name, 'data')
-  return Environment(loader=FileSystemLoader(root_dir))
 
 def get_pingback_url():
   return urljoin(server.config['pingback'], 'ping')

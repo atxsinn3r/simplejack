@@ -8,7 +8,7 @@ from flask import Response
 import json
 import os
 
-EXPLOIT_PATHS = Path(os.path.join(CAMPAIGN_PATH, 'memory', 'exploits'))
+EXPLOIT_PATHS = Path(os.path.join(CAMPAIGN_PATH, 'memory', 'data'))
 
 class Campaign(Base):
   def get_candidates(self):
@@ -47,6 +47,7 @@ class Campaign(Base):
     return False
 
   def find_exploit_candidates(self, ua):
+    print(f'Matching for {ua}')
     candidates = []
     candidat_list = self.get_candidates()
     for candidate in candidat_list:

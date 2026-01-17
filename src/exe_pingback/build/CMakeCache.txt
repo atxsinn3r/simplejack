@@ -259,7 +259,7 @@ PKG_CONFIG_ARGN:STRING=
 PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/homebrew/bin/pkg-config
 
 //127.0.0.1
-URL:STRING=http://127.0.0.1:8181/ping
+URL:STRING=http://192.168.1.186:8181/ping
 
 //Automatically copy dependencies into the output directory for
 // executables.
