@@ -5,7 +5,7 @@ import argparse
 import importlib
 from lib.helper import get_campaign_info
 
-def start_campaign(campaign_choice, args):
+def load_campaign(campaign_choice, args):
   campaign = importlib.import_module(f"campaign.{campaign_choice}.main")
   for fn in ("init", "start"):
     if not hasattr(campaign, fn):
@@ -27,7 +27,7 @@ def main(args):
   parser.add_argument('--ssl_context', type=str, choices=['None', 'adhoc', 'custom'], help='Optional: SSL context')
   args = parser.parse_args()
   campaign_choice = args.campaign
-  start_campaign(campaign_choice, args)
+  load_campaign(campaign_choice, args)
 
 if __name__ == '__main__':
   main(sys.argv)
