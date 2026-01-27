@@ -1,4 +1,4 @@
 {
     "name": "Memory corruption",
-    "description": "Delivers memory corruption exploits"
+    "description": "Delivers memory corruption exploits that would only work on specific browsers and/or versions."
 }

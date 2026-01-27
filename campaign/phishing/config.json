@@ -1,4 +1,4 @@
 {
     "name": "Phishing",
-    "description": "A fake phishing campaign that targets Okta"
+    "description": "A fake phishing campaign that targets Okta. You can also swap this out to test email phishing, captive wifi portal, etc."
 }

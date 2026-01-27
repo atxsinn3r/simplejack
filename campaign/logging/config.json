@@ -1,4 +1,4 @@
 {
     "name": "Logger",
-    "description": "Logs browser interactions only"
+    "description": "Logs client requests to assit things like SSRF or XSS testing."
 }

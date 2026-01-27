@@ -1,4 +1,4 @@
 {
     "name": "QR Code",
-    "description": "Delivers a QR code"
+    "description": "Delivers a QR code which pings back to us."
 }

@@ -1,4 +1,4 @@
 {
     "name": "EXE Dropper",
-    "description": "Provides a download link to an executable"
+    "description": "Provides a download link to an EXE to assist download/exec type attacks."
 }
