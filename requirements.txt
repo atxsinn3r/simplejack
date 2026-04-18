@@ -1,0 +1,8 @@
+werkzeug.utils
+jinja2
+flask
+qrcode
+flask_classful
+ua_parser
+wsgidav
+cheroot

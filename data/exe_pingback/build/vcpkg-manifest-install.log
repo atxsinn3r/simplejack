@@ -1,0 +1,143 @@
+waiting to take filesystem lock on /Users/wei/dev/tools/vcpkg/.vcpkg-root...
+Detecting compiler hash for triplet arm64-osx...
+Compiler found: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
+The following packages will be built and installed:
+    curl[core,non-http,openssl,ssl]:arm64-osx@8.17.0
+  * openssl:arm64-osx@3.6.0#3
+  * vcpkg-cmake:arm64-osx@2024-04-23
+  * vcpkg-cmake-config:arm64-osx@2024-05-23
+  * vcpkg-cmake-get-vars:arm64-osx@2025-05-29
+  * zlib:arm64-osx@1.3.1
+Additional packages (*) will be modified to complete this operation.
+Restored 0 package(s) from /Users/wei/.cache/vcpkg/archives in 393 us. Use --debug to see more details.
+Installing 1/6 vcpkg-cmake:arm64-osx@2024-04-23...
+Building vcpkg-cmake:arm64-osx@2024-04-23...
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake_arm64-osx/share/vcpkg-cmake/vcpkg_cmake_configure.cmake
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake_arm64-osx/share/vcpkg-cmake/vcpkg_cmake_build.cmake
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake_arm64-osx/share/vcpkg-cmake/vcpkg_cmake_install.cmake
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake_arm64-osx/share/vcpkg-cmake/vcpkg-port-config.cmake
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake_arm64-osx/share/vcpkg-cmake/copyright
+-- Performing post-build validation
+Starting submission of vcpkg-cmake:arm64-osx@2024-04-23 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-cmake:arm64-osx: 25 ms
+vcpkg-cmake:arm64-osx package ABI: 96fe92011c31f9af4204ac28b9433a89cc1ccb9f389551cdf17e044ebce9436a
+Installing 2/6 vcpkg-cmake-get-vars:arm64-osx@2025-05-29...
+Building vcpkg-cmake-get-vars:arm64-osx@2025-05-29...
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake-get-vars_arm64-osx/share/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.cmake
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake-get-vars_arm64-osx/share/vcpkg-cmake-get-vars/cmake_get_vars
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake-get-vars_arm64-osx/share/vcpkg-cmake-get-vars/cmake_get_vars/CMakeLists.txt
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake-get-vars_arm64-osx/share/vcpkg-cmake-get-vars/cmake-get-vars.cmake.in
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake-get-vars_arm64-osx/share/vcpkg-cmake-get-vars/vcpkg-port-config.cmake
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake-get-vars_arm64-osx/share/vcpkg-cmake-get-vars/copyright
+-- Performing post-build validation
+Starting submission of vcpkg-cmake-get-vars:arm64-osx@2025-05-29 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-cmake-get-vars:arm64-osx: 23.8 ms
+vcpkg-cmake-get-vars:arm64-osx package ABI: b553a7760f4daf1c411701489252b13c8a7271da08ac0383dca12e7b3c8fcfb5
+Completed submission of vcpkg-cmake:arm64-osx@2024-04-23 to 1 binary cache(s) in 9.38 ms
+Installing 3/6 vcpkg-cmake-config:arm64-osx@2024-05-23...
+Building vcpkg-cmake-config:arm64-osx@2024-05-23...
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake-config_arm64-osx/share/vcpkg-cmake-config/vcpkg_cmake_config_fixup.cmake
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake-config_arm64-osx/share/vcpkg-cmake-config/vcpkg-port-config.cmake
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/vcpkg-cmake-config_arm64-osx/share/vcpkg-cmake-config/copyright
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Starting submission of vcpkg-cmake-config:arm64-osx@2024-05-23 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-cmake-config:arm64-osx: 21.4 ms
+vcpkg-cmake-config:arm64-osx package ABI: c3d44b1a64ec871512dcbd81a945a9f902ea28aaccf214c0a57495a4dde880f2
+Completed submission of vcpkg-cmake-get-vars:arm64-osx@2025-05-29 to 1 binary cache(s) in 6.45 ms
+Installing 4/6 openssl:arm64-osx@3.6.0#3...
+Building openssl:arm64-osx@3.6.0#3...
+-- Using cached openssl-openssl-openssl-3.6.0.tar.gz
+-- Cleaning sources at /Users/wei/dev/tools/vcpkg/buildtrees/openssl/src/nssl-3.6.0-a2eab2a5bb.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /Users/wei/dev/tools/vcpkg/downloads/openssl-openssl-openssl-3.6.0.tar.gz
+-- Applying patch cmake-config.patch
+-- Applying patch command-line-length.patch
+-- Applying patch script-prefix.patch
+-- Applying patch aes_cfb128_vaes_encdec_wrapper.diff
+-- Applying patch windows/install-layout.patch
+-- Applying patch windows/install-pdbs.patch
+-- Applying patch windows/install-programs.diff
+-- Applying patch unix/android-cc.patch
+-- Applying patch unix/move-openssldir.patch
+-- Applying patch unix/no-empty-dirs.patch
+-- Applying patch unix/no-static-libs-for-shared.patch
+-- Using source at /Users/wei/dev/tools/vcpkg/buildtrees/openssl/src/nssl-3.6.0-a2eab2a5bb.clean
+-- Getting CMake variables for arm64-osx
+-- Loading CMake variables from /Users/wei/dev/tools/vcpkg/buildtrees/openssl/cmake-get-vars_C_CXX-arm64-osx.cmake.log
+-- Getting CMake variables for arm64-osx-dbg
+-- Getting CMake variables for arm64-osx-rel
+-- Configuring arm64-osx-dbg
+-- Configuring arm64-osx-rel
+-- Building arm64-osx-dbg
+-- Installing arm64-osx-dbg
+-- Building arm64-osx-rel
+-- Installing arm64-osx-rel
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/openssl_arm64-osx/lib/pkgconfig/libcrypto.pc
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/openssl_arm64-osx/lib/pkgconfig/libssl.pc
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/openssl_arm64-osx/lib/pkgconfig/openssl.pc
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/openssl_arm64-osx/debug/lib/pkgconfig/libcrypto.pc
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/openssl_arm64-osx/debug/lib/pkgconfig/libssl.pc
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/openssl_arm64-osx/debug/lib/pkgconfig/openssl.pc
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/openssl_arm64-osx/share/openssl/usage
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/openssl_arm64-osx/share/openssl/copyright
+-- Performing post-build validation
+Starting submission of openssl:arm64-osx@3.6.0#3 to 1 binary cache(s) in the background
+Elapsed time to handle openssl:arm64-osx: 1 min
+openssl:arm64-osx package ABI: 294d6ebfb2a2d2f2a4a485123a520366d1f18cbb4b808fffab41572cd2440c87
+Completed submission of vcpkg-cmake-config:arm64-osx@2024-05-23 to 1 binary cache(s) in 6.04 ms
+Installing 5/6 zlib:arm64-osx@1.3.1...
+Building zlib:arm64-osx@1.3.1...
+-- Using cached madler-zlib-v1.3.1.tar.gz
+-- Cleaning sources at /Users/wei/dev/tools/vcpkg/buildtrees/zlib/src/v1.3.1-2e5db616bf.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /Users/wei/dev/tools/vcpkg/downloads/madler-zlib-v1.3.1.tar.gz
+-- Applying patch 0001-Prevent-invalid-inclusions-when-HAVE_-is-set-to-0.patch
+-- Applying patch 0002-build-static-or-shared-not-both.patch
+-- Applying patch 0003-android-and-mingw-fixes.patch
+-- Using source at /Users/wei/dev/tools/vcpkg/buildtrees/zlib/src/v1.3.1-2e5db616bf.clean
+-- Configuring arm64-osx
+-- Building arm64-osx-dbg
+-- Building arm64-osx-rel
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/zlib_arm64-osx/share/zlib/vcpkg-cmake-wrapper.cmake
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/zlib_arm64-osx/lib/pkgconfig/zlib.pc
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/zlib_arm64-osx/debug/lib/pkgconfig/zlib.pc
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/zlib_arm64-osx/share/zlib/copyright
+-- Performing post-build validation
+Starting submission of zlib:arm64-osx@1.3.1 to 1 binary cache(s) in the background
+Elapsed time to handle zlib:arm64-osx: 1.6 s
+zlib:arm64-osx package ABI: 80e74e1f91c64c26353f27ed797200dfc26fb4c2bd4393e48abf416763ec1fcf
+Installing 6/6 curl[core,non-http,openssl,ssl]:arm64-osx@8.17.0...
+Building curl[core,non-http,openssl,ssl]:arm64-osx@8.17.0...
+-- Using cached curl-curl-curl-8_17_0.tar.gz
+-- Cleaning sources at /Users/wei/dev/tools/vcpkg/buildtrees/curl/src/url-8_17_0-def923c407.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /Users/wei/dev/tools/vcpkg/downloads/curl-curl-curl-8_17_0.tar.gz
+-- Applying patch dependencies.patch
+-- Applying patch pkgconfig-curl-config.patch
+-- Using source at /Users/wei/dev/tools/vcpkg/buildtrees/curl/src/url-8_17_0-def923c407.clean
+-- Configuring arm64-osx
+-- Building arm64-osx-dbg
+-- Building arm64-osx-rel
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/curl_arm64-osx/lib/pkgconfig/libcurl.pc
+-- Fixing pkgconfig file: /Users/wei/dev/tools/vcpkg/packages/curl_arm64-osx/debug/lib/pkgconfig/libcurl.pc
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/curl_arm64-osx/share/curl/vcpkg-cmake-wrapper.cmake
+-- Installing: /Users/wei/dev/tools/vcpkg/packages/curl_arm64-osx/share/curl/usage
+-- Performing post-build validation
+Starting submission of curl[core,non-http,openssl,ssl]:arm64-osx@8.17.0 to 1 binary cache(s) in the background
+Elapsed time to handle curl:arm64-osx: 20 s
+curl:arm64-osx package ABI: 924c36123c3b7e25a4a66288a7b90474d77491f3dc2b012b98dcbde0fff02552
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Packages installed in this vcpkg installation declare the following licenses:
+Apache-2.0
+BSD-3-Clause
+ISC
+MIT
+Zlib
+curl
+curl is compatible with built-in CMake targets:
+
+    find_package(CURL REQUIRED)
+    target_link_libraries(main PRIVATE CURL::libcurl)
+
+Completed submission of openssl:arm64-osx@3.6.0#3 to 1 binary cache(s) in 1.6 s
+Completed submission of zlib:arm64-osx@1.3.1 to 1 binary cache(s) in 23.2 ms
+Waiting for 1 remaining binary cache submissions...
+Completed submission of curl[core,non-http,openssl,ssl]:arm64-osx@8.17.0 to 1 binary cache(s) in 281 ms (1/1)
+All requested installations completed successfully in: 1.4 min

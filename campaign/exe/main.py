@@ -4,9 +4,9 @@ from base.webserver import *
 from base.webserver import init as base_init
 from lib.config import *
 
-exe_pingback_src_dir = Path(os.path.join(SRC_PATH, 'exe_pingback'))
-build_script = Path(os.path.join(exe_pingback_src_dir, 'build.sh'))
-exe_path = Path(os.path.join(exe_pingback_src_dir, 'build', 'EXEPINGBACK'))
+exe_pingback_data_dir = Path(os.path.join(DATA_PATH, 'exe_pingback'))
+build_script = Path(os.path.join(exe_pingback_data_dir, "build.sh"))
+exe_path = Path(os.path.join(exe_pingback_data_dir, "build", "EXEPINGBACK"))
 
 class Campaign(Base):
   @route('/download')
@@ -14,7 +14,7 @@ class Campaign(Base):
     return send_file(exe_path, as_attachment=True, download_name='hello_world')
 
 def generate_exe(url):
-  result = subprocess.run([build_script, url], check=True, cwd=exe_pingback_src_dir, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+  result = subprocess.run([build_script, url], check=True, cwd=exe_pingback_data_dir, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
   if not os.path.exists(exe_path):
     raise RuntimeError('EXE not found')
 
