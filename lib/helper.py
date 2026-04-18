@@ -30,4 +30,4 @@ def get_uuid():
   return (str(unique_id))
 
 def print_message(msg):
-  print(f' * [{get_timestamp()}] {msg}')
+  print(f'{get_timestamp()} : {msg}')
